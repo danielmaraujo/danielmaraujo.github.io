@@ -1,0 +1,16 @@
+main{
+    background-image: url(https://i0.wp.com/www.savepoint.blog.br/wp-content/uploads/2018/01/Light-Grey-Background-Hd-5-1.jpg?ssl=1);
+}
+
+main h1{
+    font-family: cursive;
+}
+
+article{
+    background-color: whitesmoke;
+}
+
+article p{
+    color: gray;
+    text-align: center;
+}
