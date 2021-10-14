@@ -1,0 +1,19 @@
+a:link{
+    color: darkgreen;
+}
+
+a:visited{
+    color: maroon;
+}
+
+a:hover{
+    color: yellow;
+}
+
+a:focus{
+    color: blue;
+}
+
+li:before{
+    content: "➝";
+}
