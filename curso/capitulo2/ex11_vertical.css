@@ -1,0 +1,13 @@
+li {
+    background-color: lightgray;
+    display: block;
+    padding: 1rem;
+}
+
+li:hover{
+    background-image: url("Sprite_g.jpg");
+}
+
+a{
+    color: black;
+}
