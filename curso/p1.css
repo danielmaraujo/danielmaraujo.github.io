@@ -68,6 +68,7 @@ header{
     display: inline-block;
     text-align: center;
     text-decoration: none;
+    color: black;
 }
 
 #main-container{
@@ -102,6 +103,7 @@ header{
     margin: 2% 0;
     padding: 2%;
     text-decoration: none; 
+    color: black;
 }
 
 #most-popular-box h3{
@@ -116,6 +118,10 @@ header{
     background-color: lightgray;
     font-size: 0.8rem;
     list-style: disclosure-closed;
+}
+
+#most-popular-box a{
+    color: black;
 }
 
 main{
@@ -137,6 +143,10 @@ main header div{
     display: inline;
     text-align: end;
     font-size: 0.8rem;
+}
+
+main header a{
+    color: black;
 }
 
 .main-icon{
