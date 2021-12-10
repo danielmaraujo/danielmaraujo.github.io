@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Avaliação P2</title>
+</head>
+<body>
+    <form action="">
+        <label for="nome">Nome: </label>
+        <input type="text" name="nome" id="nome"> <br>
+
+        <label for="telefone">Telefone: </label>
+        <input type="tel" name="telefone" id="telefone"> <br>
+
+        <label for="cretirada">Cidade Retirada: </label>
+        <select name="cretirada" id="cretirada">
+            <option value="campos">Campos dos Goytacazes - RJ</option>
+            <option value="rio">Rio de Janeiro - RJ</option>
+            <option value="vitoria">Vitória - ES</option>
+        </select><br>
+
+        <label for="centrega">Cidade Entrega: </label>
+        <select name="centrega" id="centrega">
+            <option value="campos">Campos dos Goytacazes - RJ</option>
+            <option value="rio">Rio de Janeiro - RJ</option>
+            <option value="vitoria">Vitória - ES</option>
+        </select><br>
+
+        <label for="dretirada">Data Retirada: </label>
+        <input type="date" name="dretirada" id="dretirada"><br>
+
+        <label for="ddevolucao">Data Devolução: </label>
+        <input type="date" name="ddevolucao" id="ddevolucao"><br>
+
+        <label for="tipocarro">Cidade Entrega: </label>
+        <select name="tipocarro" id="tipocarro">
+            <option value="basico">Básico (R$ 119,00)</option>
+            <option value="basicoar">Básico com Ar (R$ 199,00)</option>
+            <option value="executivo">Executivo(R$ 299,00)</option>
+        </select><br>
+
+        <input type="submit" id="submit" value="Enviar">
+    </form>
+
+    <script>
+        document.getElementById("submit").onclick = function(){
+            var valor = 0;
+
+            if (document.getElementById("cretirada").value != document.getElementById("centrega").value){
+                valor = 300;
+            }
+            
+            var dretirada = new Date(document.getElementById("dretirada").value);
+            var ddevolucao = new Date(document.getElementById("ddevolucao").value);
+            var dias = (ddevolucao.getTime() - dretirada.getTime()) / (1000 * 3600 * 24);
+
+            if (document.getElementById("tipocarro").value == "basico"){
+                valor = valor + (119 * dias);
+            }
+            if (document.getElementById("tipocarro").value == "basicoar"){
+                valor = valor + (199 * dias);
+            }
+            if (document.getElementById("tipocarro").value == "executivo"){
+                valor = valor + (299 * dias);
+            }
+
+            alert("Valor total: R$" + valor)
+        }
+    </script>
+</body>
+</html>
