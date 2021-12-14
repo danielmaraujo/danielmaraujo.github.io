@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 14</title>
+</head>
+<body>
+    <h3>Menu de Itens</h3>
+    <ul id="list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+    </ul>
+    <input type="text" id="menuinput">
+    <input type="button" value="Adicionar Item Menu" id="button">
+
+
+    <script>
+        document.getElementById("button").addEventListener('click', function(){
+            var ul = document.getElementById("list");
+            var li = document.createElement("li");
+            li.appendChild(document.createTextNode(document.getElementById("menuinput").value));
+            ul.appendChild(li);
+        });
+    </script>
+</body>
+</html>
