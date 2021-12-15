@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 16</title>
+
+        <script type="text/javascript">
+            function toggle(id){
+                element = document.getElementById(id);
+                element.setAttribute("src", ((element.getAttribute("src") != '../../img/lampada_off.gif') ? '../../img/lampada_off.gif' : '../../img/lampada_on.gif'))
+            }
+        </script>
+
+    </head>
+
+    <body>
+        <img src="../../img/lampada_off.gif" id="lampada" onclick="toggle('lampada')">
+    </body>
+</html>
